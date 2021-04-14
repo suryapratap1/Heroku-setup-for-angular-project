@@ -1,5 +1,26 @@
 ### Heroku-setup-for-angular-project
 
+Step 1: Install Heroku CLI in your system by running the following command. It will install the updated version of Heroku CLI into your system.
+
+Step -2 : Now, get to https://www.heroku.com/ and register. After completing your registration go to the dashboard and create a new app named “myherokuapp”  or name of your choice. 
+
+#### Step 3: Run the following command, it will prompt you to enter any key to continue, it will open a new tab in your browser asking you to log in to your Heroku account. After you enter the required credentials and login on the site, it is going to show in your terminal “Logged in”
+
+heroku login
+
+#### Step 4: Initialize a Git repository by running the following command. Make sure you be at the top-level of your project directory.
+
+git init
+
+#### Step 5: Now, add the Heroku remote by simply running the command which you will find in your Heroku Dashboard -> myherokuapp or Your App Name -> Deploy Section 
+
+Or 
+
+Simply run the following command. Deployment method should’ve chosen as GitHub.
+
+heroku git: remote -a myherokuapp
+
+#### Step 6: Now the most important part and i.e Heroku provides the buildpack for Python, Node.js based app but it doesn’t provide buildpack for React apps. So we have to add an extra buildpack in the settings section of your Heroku app.
 
 Open package.json under your parent directory and insert following line to scriptstag:
 
